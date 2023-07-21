@@ -1,0 +1,110 @@
+ion-header {
+  align-items: center;
+}
+ion-toolbar{
+  --background: #72cc50;
+}
+ion-content {
+  ion-list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    ion-item{
+      ion-grid{
+        ion-row{
+          text-align: center;
+          background: #58bb43;
+        }
+      }
+    }
+  }
+  ion-item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+      ion-label{
+        ion-grid{
+
+          text-align: center;
+          background: #58bb43;
+          ;
+        }
+      }
+  }
+}
+ion-button[color="danger"]{
+  text-transform: initial;
+}
+
+/* home.page.scss */
+
+.item-input {
+  border: 4px solid #000000;
+  border-radius: 4px;
+  height: 50%;
+  position: relative;
+  margin-bottom: 2%;
+  padding-left: 5%
+  
+}
+
+item-input input {
+  border: #000000;
+  border-radius: 4px;
+  padding: 10px;
+  padding-left: 5px;
+  width: 100%;
+  box-sizing: content-box;
+  margin-left: 60px;
+}
+item-input input:focus {
+  border: #173517;
+}
+.item-input ion-input {
+  --padding-start: 0;
+  --padding-end: 0;
+}
+/* home.page.scss */
+
+.item-label {
+  font-size: 65%;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 200%;
+  background-color: #b2a9a9;
+  margin-top: 0%;
+}
+/* Add these styles to your component's CSS file or global styles */
+
+.item-label {
+  font-size: 14px;
+}
+
+.input-text {
+  font-size: 16px;
+}
+
+.input-number {
+  font-size: 16px;
+}
+
+.item-heading {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;                         
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.item-value {
+  font-size: 16px;
+  font-weight: lighter;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+ion-item {
+  height: 65px;
+}

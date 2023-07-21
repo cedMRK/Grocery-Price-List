@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="end" class="ion-text-center">Grocery Price List</ion-title>
+    <ion-button slot="end" color="danger" size="small" shape="round" (click)="logout()">Log Out</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <label class="item-label">Item Name:</label>
+          <div class="item-input">
+            <ion-input placeholder=" " [(ngModel)]="newItemName" class="input-text"></ion-input>
+          </div>
+        </ion-col>
+        <ion-col>
+          <label class="item-label">Category:</label>
+          <div class="item-input">
+            <ion-input placeholder=" " [(ngModel)]="newItemCategory" class="input-text"></ion-input>
+          </div>
+        </ion-col>
+        <ion-col>
+          <label class="item-label">Price:</label>
+          <div class="item-input">
+            <ion-input placeholder=" " [(ngModel)]="newItemPrice" type="number" class="input-number"></ion-input>
+          </div>
+        </ion-col>
+        <ion-col>
+          <ion-button color="success" (click)="addItem()" size="full">Add Item</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="filterItems()">
+  </ion-searchbar>
+
+  <ion-list>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h2 class="item-heading">Item Name</h2>
+          </ion-col>
+          <ion-col>
+            <h2 class="item-heading">Category</h2>
+          </ion-col>
+          <ion-col>
+            <h2 class="item-heading">Price</h2>
+          </ion-col>
+          <ion-col>
+            <h2 class="item-heading">Actions</h2>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item *ngFor="let item of filteredItems">
+      <ion-label>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p class="item-value">{{ item.name }}</p>
+            </ion-col>
+            <ion-col>
+              <p class="item-value">{{ item.category }}</p>
+            </ion-col>
+            <ion-col>
+              <p class="item-value">{{ item.price }}</p>
+            </ion-col>
+            <ion-col>
+              <ion-button (click)="editItem(item)" size="small" color="primary">Edit</ion-button>
+              <ion-button (click)="deleteItem(item)" size="small" color="danger">Delete</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

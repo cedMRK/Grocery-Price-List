@@ -1,0 +1,10 @@
+.flex-center1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+ion-content {
+    --background: var(--ion-color-success);
+}
